@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.nav {
+    z-index: 1;
+    position: relative;
+    box-shadow: gray 0px 1px 10px;
+}
+.nav .bar {
+    display: flex;
+}
+.nav .bar .logo {
+    padding: 16px;
+}
+
+.nav .bar .link_container {
+    display: flex;
+    margin-left: auto;
+    padding: 16px;
+}
+.nav .bar .link_container .segment{
+    display: none;
+}
+.nav .bar .link_container .link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+    padding: 8px;
+}
+.nav .bar .link_container .hamburger, .nav .bar .link_container .cross {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+    font-weight: bolder;
+    padding: 8px;
+}
+
+.slider_container {
+    background-color: rgb(216, 215, 215);
+}
+.slider_container .frame {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 400px;
+}
+.slider_container .frame .dot_container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.slider_container .frame .dot_container .dots {
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+    display: flex;
+}
+.slider_container .frame .slides{
+    display: flex;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+    padding-top: 120px;
+    text-align: center;
+}
+.slider_container .frame .dot_container .dots .dot {
+    padding: 8px;
+    cursor: pointer;
+}
+.gallery {
+    height: 1830px;
+    overflow: hidden;
+}
+.image_container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.image_container .show_more {
+    padding: 10px;
+    border: 1px solid black;
+    margin: 30px auto;
+    cursor: pointer;
+    width: 50%;
+} 
+.image_container .show_more .text {
+    text-align: center;
+    font-size: 20px;
+    color: grey;
+    padding: 3px 1px;
+}
+.image_container .img_cont {
+    position: relative;
+    background-color: rgb(216, 215, 215);
+    height: 350px;
+}
+.image_container .img_cont .img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+}
+.image_container .text {
+    text-align: center;
+    font-size: 20px;
+    padding: 16px;
+}
+.faqs_container {
+    width: 90%;
+    margin: 0 auto;
+}
+.faqs_container .header {
+    text-align: center;
+    font-size: 32px;
+    padding: 32px;
+    margin-top: 32px;
+}
+.faqs_container .section {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.faqs_container .section .section_header {
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+}
+.faqs_container .section .section_container {
+    position: relative;
+    margin-left:auto;
+    margin-top: 5px;
+}
+.faqs_container .section .section_container .minus {
+    margin-left: auto;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.faqs_container .section .section_container .plus {
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+}
+.faqs_container .text {
+    width: 98%;
+    padding: 16px 0 16px 0;
+    text-align: left;
+}
+.footer {
+    margin-top: 40px;
+    background-color: rgb(216, 215, 215);
+}
+.footer .text {
+    padding: 16px;
+    font-size: 20px;
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.719);
+    box-shadow: gray 0 4px 5px 0 ;
+}
+@media only screen and (min-width: 710px) {
+    .nav .bar {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav .bar .logo {
+        padding: 25px 0 25px 0;
+    }
+    .nav .bar .link_container .segment{
+        display: inline-block;
+    }
+    .faqs_container {
+        width: 60%;
+    }
+    .image_container {
+        width: 60%;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto auto auto auto;
+    }
+    .nav .bar .link_container .link {
+        display: inline-block;
+    }
+    .slider_container .frame .dots{
+        right: 46%;
+    }
+    .slider_container .frame .slides{
+        left: 45%;
+    }
+    .nav .bar .link_container .hamburger {
+        display: none;
+    }
+    .image_container .show_more {
+        display: none;
+    }
+    .gallery {
+        height: auto;
+    }
+}
